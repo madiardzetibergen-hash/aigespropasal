@@ -11,7 +11,6 @@ export function HeroSection() {
     <div className={s.heroInner}>
       <header className={s.header}>
         <a href="#intro" aria-label="AIGES — начало"><Logo /></a>
-        <a className={s.headerContact} href="#contact">Обсудить проект <Arrow /></a>
       </header>
       <div className={s.heroCopy}>
         <h1 id="hero-title"><span className={s.heroBrand}>AIGES<span>.</span></span><span className={s.heroTitle}>DESIGN &<br />DEVELOPMENT<br className={s.mobileBreak} /> STUDIO</span></h1>

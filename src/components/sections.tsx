@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { capabilities, mission, industries, solutions, geography, process, technologies, technologyIntro, pricing, terms, contacts } from '@/content/content';
-import { Arrow, Logo, Reveal, SectionFooter, SectionHeading, Cube } from './primitives';
+import { Arrow, Logo, Reveal, SectionFooter, SectionHeading, Cube, TelegramIcon, WhatsappIcon } from './primitives';
 import s from './deck.module.css';
 
 export function CapabilitiesSection() {
@@ -89,9 +89,23 @@ export function PricingSection() {
 
 export function ContactSection() {
   return <section id="contact" className={`${s.section} ${s.contact}`} aria-labelledby="contact-title"><div className={s.container}>
-
-    <Reveal><h2 id="contact-title" className={s.contactHeading}>ОБСУДИМ<br />ВАШ ПРОЕКТ<span>↗</span></h2></Reveal>
-    <div className={s.contactGrid}><div><p className={s.contactText}>Есть задача или идея?<br />Давайте обсудим, как её реализовать.</p><p className={s.contactServices}>Разработка сайтов · UX/UI дизайн · Веб-сервисы · Автоматизация</p><a className={s.primaryCta} href={contacts[1].href} target="_blank" rel="noopener noreferrer">ОБСУДИТЬ ПРОЕКТ <Arrow /></a><div className={s.contactLinks}>{contacts.map(item => <a href={item.href} key={item.title} target="_blank" rel="noopener noreferrer">{item.title} <Arrow /></a>)}</div></div><div className={s.qr}><Image src="/assets/qr.png" width={174} height={170} alt="QR-код с переходом на сайт и контакты AIGES" /><p>QR-код с переходом на сайт<br />и контакты компании</p></div></div>
+    <Reveal><h2 id="contact-title" className={s.contactHeading}>ОБСУДИМ<br />ВАШ ПРОЕКТ</h2></Reveal>
+    <div className={s.contactGrid}>
+      <div>
+        <p className={s.contactText}>Есть задача или идея?<br />Давайте обсудим, как её реализовать.</p>
+        <p className={s.contactServices}>Разработка сайтов · UX/UI дизайн · Веб-сервисы · Автоматизация</p>
+        <a className={s.primaryCta} href={contacts[1].href} target="_blank" rel="noopener noreferrer">ОБСУДИТЬ ПРОЕКТ <Arrow /></a>
+        <div className={s.contactSocials}>
+          <a href={contacts[0].href} target="_blank" rel="noopener noreferrer" className={s.socialIconBtn} aria-label="Telegram"><TelegramIcon /></a>
+          <a href={contacts[1].href} target="_blank" rel="noopener noreferrer" className={s.socialIconBtn} aria-label="WhatsApp"><WhatsappIcon /></a>
+          <a href={contacts[2].href} target="_blank" rel="noopener noreferrer" className={s.webLink}>aiges.kz <Arrow /></a>
+        </div>
+      </div>
+      <div className={s.qr}>
+        <Image src="/assets/qr.png" width={174} height={170} alt="QR-код с переходом на сайт и контакты AIGES" />
+        <p>QR-код с переходом на сайт<br />и контакты компании</p>
+      </div>
+    </div>
     <footer className={s.contactFooter}><a href="#intro" aria-label="Вернуться к началу"><Logo /></a><span>Almaty · Kazakhstan</span><a href="#intro" aria-label="Наверх"><Arrow direction="down" /></a></footer>
   </div></section>;
 }

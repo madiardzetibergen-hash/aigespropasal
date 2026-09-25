@@ -67,6 +67,9 @@ export const projects = [
   { title: 'ORBIX PORTAL', category: 'Корпоративный портал · Управление проектами', image: '/assets/project-orbix-portal.webp', background: '#f0f2f5' },
   { title: 'NOVA CLUB', category: 'Закрытый клуб · Мобильное приложение', image: '/assets/project-nova-club.webp', background: '#dbe0e5' },
   { title: 'DigitBiz', category: 'Автоматизация процессов и аналитика', image: '/assets/project-digitbiz.webp', background: '#0c2427' },
+  { title: 'MANHARRDY', category: 'Интернет-магазин одежды премиум-класса', image: '/assets/project-manharrdy.webp', background: '#e8e4df' },
+  { title: 'Я боюсь и делаю', category: 'Подкаст-платформа и медиа-проект', image: '/assets/project-fear-and-do.webp', background: '#ffffff' },
+  { title: 'Jaryq Home', category: 'Интернет-магазин освещения и интерьера', image: '/assets/project-jaryq-home.webp', background: '#1c1b18' },
 ];
 export const pricing = [
   { price: '500 000 ₸', title: 'Landing Page' },
